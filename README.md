@@ -3,7 +3,7 @@ A Linux File System involving the Linux Kernel Operating System.
 
 
 ## Overview
-1. A kernel module interfaces with the VFS or Linux and redirects all calls to your toy file system which must be implemented in User space.
+1. A kernel module interfaces with the VFS or Linux and redirects all calls to your file system which must be implemented in User space.
 2. Your file system can be mounted like any other file system in Linux.
 3. A communication mechanism to pass data from kernel to user and viceversa (i.e. proc file system, device under dev/ directory, netlink sockets--your choice of mechanism)
 4. A process in user-space that stores your file and process all file system requests forwarded by the kernel module.
