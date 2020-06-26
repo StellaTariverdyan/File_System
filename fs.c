@@ -119,7 +119,7 @@ struct inode *fs_get_inode(struct super_block *sb, const struct inode *directory
 /*=======================================================
 Super Block
 =========================================================
-	- toy_fs_fill_superblock
+	- fs_fill_superblock
 	- Edit: Add Inode Allocation
 =========================================================*/
 
@@ -171,7 +171,7 @@ static struct dentry *fs_mount(struct file_system_type *filesystem_type, int fla
 	struct dentry *det = mount_bdev(filesystem_type, flags, device_name, data, fs_fill_superblock);	
 
 	if(IS_ERR(det))
-		printk(KERN_ERR "Error Mounting Toy File System\n");
+		printk(KERN_ERR "Error Mounting File System\n");
 	else
 		printk(KERN_INFO "Initializing: fs_mount \n");
 	return det;
